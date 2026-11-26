@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pattern-dsl-engine"
+version = "0.1.0"
+description = "Safe parametric 2D pattern construction DSL and geometry engine"
+requires-python = ">=3.10"
+
+[project.scripts]
+pattern-dsl = "pattern_engine.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["pattern_engine*"]

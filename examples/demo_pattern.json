@@ -1,0 +1,14 @@
+{
+  "dsl_version": "0.1",
+  "name": "Demo parametric panel (not a wearable pattern)",
+  "units": "cm",
+  "measurements": ["hips"],
+  "parameters": {"ease": -0.08, "height": 12},
+  "operations": [
+    {"id":"A", "type":"point", "x":0, "y":0},
+    {"id":"B", "type":"point", "x":"hips*(1+ease)/4", "y":0},
+    {"id":"C", "type":"offset", "from":"B", "dx":0, "dy":"height"},
+    {"id":"D", "type":"offset", "from":"A", "dx":0, "dy":"height"},
+    {"id":"panel", "type":"piece", "path":["A","B","C","D"]}
+  ]
+}
